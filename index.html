@@ -35,7 +35,7 @@
         </div>
         <div class="card-back card">
           <img src="./images/bg-card-back.png" alt="card back" />
-          <div class="cvc">1234</div>
+          <div class="cvc">123</div>
         </div>
       </div>
 
@@ -55,14 +55,14 @@
           <div class="thirdRow">
             <div class="card-item exp-date">
               <input type="text" onchange="leadingZerosDate(this)" name="card exp month" placeholder="MM" id="cDateM"
-                onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" required />
+                onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" maxlength="2" required />
               <label for="cDateM">Exp. Date (MM/YY)</label>
               <input type="text" name="card exp year" onchange="leadingZerosDate(this)" placeholder="YY" id="cDateY"
-                onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" required />
+                onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" maxlength="2" required />
               <span class="error-msg">Can't be blank.</span>
             </div>
             <div class="card-item cvc">
-              <input type="text" name="cvc" id="cvc" maxlength="4" onchange="leadingZeros(this)" placeholder="e.g. 1234"
+              <input type="text" name="cvc" id="cvc" maxlength="3" onchange="leadingZeros(this)" placeholder="e.g. 123"
                 required />
               <label for="cName">cvc</label>
               <span class="error-msg">Can't be blank.</span>
